@@ -1,42 +1,98 @@
-80
-443
-21
-22
-23
-25
-53
-67
-68
-161
-162
-3389
-3306
-5432
-27017
-6379
-123
-389
-636
-143
-110
-119
-8080
-1080
-6881
-6882
-6883
-6884
-6885
-6886
-6887
-6888
-6889
-9418
-162
-88
-500
-5060
-5061
-5222
-5223
-1723
+80 HTTP (Hypertext Transfer Protocol)
+443 HTTPS (HTTP Secure)
+21 FTP (File Transfer Protocol)
+22 SSH (Secure Shell)
+23 Telnet
+25 SMTP (Simple Mail Transfer Protocol)
+53 DNS (Domain Name System)
+67 DHCP (Dynamic Host Configuration Protocol)
+68 DHCP (Dynamic Host Configuration Protocol)
+110 POP3 (Post Office Protocol version 3)
+119 NNTP (Network News Transfer Protocol)
+123 NTP (Network Time Protocol)
+143 IMAP (Internet Message Access Protocol)
+161 SNMP (Simple Network Management Protocol)
+162 SNMP Trap
+389 LDAP (Lightweight Directory Access Protocol)
+443 HTTPS (HTTP Secure)
+500 ISAKMP (Internet Security Association and Key Management Protocol)
+5060 SIP (Session Initiation Protocol)
+5061 SIP over TLS
+5222 XMPP (Extensible Messaging and Presence Protocol)
+5223 XMPP over SSL/TLS
+5432 PostgreSQL
+636 LDAPS (LDAP over SSL/TLS)
+680 ACAP (Application Configuration Access Protocol)
+8080 HTTP (Hypertext Transfer Protocol) Alternate
+1080 SOCKS Proxy
+1194 OpenVPN
+1234 VLC media player
+1433 MSSQL (Microsoft SQL Server database)
+1521 Oracle
+1720 H.323 (VoIP)
+1723 PPTP (Point-to-Point Tunneling Protocol)
+1755 RTSP (Real Time Streaming Protocol)
+1863 MSNP (Microsoft Notification Protocol)
+1935 RTMP (Real-Time Messaging Protocol)
+2000 Cisco SCCP (Skinny)
+2001 Cisco SCCP (Skinny)
+2049 NFS (Network File System)
+2082 cPanel default
+2083 cPanel default SSL
+2100 Oracle XML DB HTTP
+2222 DirectAdmin default
+2323 Telnet
+2375 Docker
+2376 Docker TLS
+2483 Oracle DB listening for SSL connections
+2484 Oracle DB listening for SSL connections
+2485 Oracle DB listening for SSL connections
+25565 Minecraft
+2601 zebra
+2604 zebra
+3128 Squid Proxy
+3306 MySQL
+3389 RDP (Remote Desktop Protocol)
+4444 Metasploit
+4567 Sinatra default
+5000 UPnP (Universal Plug and Play)
+5432 PostgreSQL
+5555 HP Data Protector
+5632 PCAnywhere
+5900 VNC (Virtual Network Computing)
+5984 CouchDB
+6000 X11 (X Window System)
+6379 Redis
+6443 Kubernetes API server
+6543 CherryPy
+6660 IRC (Internet Relay Chat)
+6666 IRC (Internet Relay Chat)
+6667 IRC (Internet Relay Chat)
+6668 IRC (Internet Relay Chat)
+6669 IRC (Internet Relay Chat)
+6697 IRC (Internet Relay Chat) over TLS/SSL
+8000 HTTP (Hypertext Transfer Protocol) Alternate
+8080 HTTP (Hypertext Transfer Protocol) Alternate
+8443 HTTPS (HTTP Secure) Alternate
+8888 HTTP (Hypertext Transfer Protocol) Alternate
+9000 SonarQube default
+9418 Git
+9999 UrBackup
+10000 Webmin
+11371 GnuPG (GNU Privacy Guard)
+12345 NetBus
+13722 NetBeans remote debugger
+16992 Intel AMT SOAP/HTTP
+18091 UPnP (Universal Plug and Play) Intel
+25565 Minecraft
+30718 Apache Karaf default SSH port
+32400 Plex Media Server
+42001 Oracle BI Publisher
+49152 Windows RPC
+49153 Windows RPC
+49154 Windows RPC
+49155 Windows RPC
+49156 Windows RPC
+49157 Windows RPC
+55600 Online Port Test
+60000 Cisco PIX Firewall SNMP
