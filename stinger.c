@@ -10,24 +10,8 @@ struct PortInfo {
     const char *service;
 };
 
-// Define an array of port information
-struct PortInfo ports[] = {
-    {80, "HTTP/HTTPS"},
-    {443, "HTTP/HTTPS"},
-    {21, "FTP"},
-    {22, "SSH"},
-    {25, "SMTP"},
-    {110, "POP3"},
-    {143, "IMAP"},
-    {53, "DNS"},
-    {23, "Telnet"},
-    {161, "SNMP"},
-    {3389, "RDP"},
-    {3306, "MySQL"},
-};
-
 // Function to perform port scanning
-void portscan(char *ip, int port) {
+void portscan(char *ip, int port, struct PortInfo *ports, int num_ports) {
     // Create socket
     int sock = socket(AF_INET, SOCK_STREAM, 0);
     if (sock < 0) {
@@ -48,7 +32,7 @@ void portscan(char *ip, int port) {
     else {
         // Search for the service name based on the port
         const char *service = "Unknown";
-        for (int i = 0; i < sizeof(ports) / sizeof(ports[0]); i++) {
+        for (int i = 0; i < num_ports; i++) {
             if (ports[i].port == port) {
                 service = ports[i].service;
                 break;
@@ -83,9 +67,25 @@ int main() {
     printf("\nIP Address: ");
     scanf("%s", ip);
 
-    // Perform port scanning for each port in the ports array
-    for (int i = 0; i < sizeof(ports) / sizeof(ports[0]); i++) {
-        portscan(ip, ports[i].port);
+    // Open the ports.txt file
+    FILE *file = fopen("ports.txt", "r");
+    if (file == NULL) {
+        perror("Error opening ports.txt");
+        exit(-1);
     }
+
+    // Read port numbers and service names from ports.txt
+    struct PortInfo ports[100]; // Assuming a maximum of 100 ports
+    int num_ports = 0;
+    while (fscanf(file, "%d %s", &ports[num_ports].port, ports[num_ports].service) != EOF) {
+        num_ports++;
+    }
+    fclose(file);
+
+    // Perform port scanning for each port in the ports array
+    for (int i = 0; i < num_ports; i++) {
+        portscan(ip, ports[i].port, ports, num_ports);
+    }
+
     return 0;
 }
